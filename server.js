@@ -15,6 +15,7 @@ app.get('/app', (req, res) => {
     res.status(200).send('200 OK').end();
 });
 
+
 app.get('/app/rps', (req, res) => {
     res.status(200).send(JSON.stringify(rps(req.body.shot))).end();
 })
@@ -48,5 +49,3 @@ app.all('*', (req, res) => {
 })
 
 app.listen(port);
-
-
